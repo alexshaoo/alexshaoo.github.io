@@ -1,0 +1,10 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+---
+
+## About Me
+
+I'm Alex Shao, and I just haphazardly write about anything interesting I discover.

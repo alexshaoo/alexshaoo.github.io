@@ -1,30 +1,275 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "alexshaoo.github.io",
+    "objectID": "personal/index.html",
+    "href": "personal/index.html",
+    "title": "Personal",
     "section": "",
-    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 17, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 14, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Personal reflections, life updates, and miscellaneous thoughts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReflections on 2024\n\n\n\npersonal\n\nreflections\n\nyear-review\n\n\n\nLooking back at the past year\n\n\n\n\n\nDec 18, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alex Shao’s Blog",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Welcome to my blog! Here you’ll find posts organized by topic."
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Alex Shao’s Blog",
+    "section": "Latest Posts",
+    "text": "Latest Posts\n\n\n\n\n\n\n\n\n\n\nAbout\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMath\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "technical/index.html",
+    "href": "technical/index.html",
+    "title": "Technical",
+    "section": "",
+    "text": "Technical posts covering programming, software engineering, and technology.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Neural Networks\n\n\n\ntechnical\n\nmachine-learning\n\nneural-networks\n\n\n\nA beginner’s guide to understanding neural networks\n\n\n\n\n\nDec 15, 2024\n\n\nAlex Shao\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a REST API with FastAPI\n\n\n\ntechnical\n\nweb-development\n\npython\n\napi\n\n\n\nLearn how to create a modern REST API using FastAPI\n\n\n\n\n\nDec 10, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/notes/gradient-descent-notes.html",
+    "href": "research/notes/gradient-descent-notes.html",
+    "title": "Research Notes: Gradient Descent Variations",
+    "section": "",
+    "text": "Quick notes on various gradient descent algorithms and when to use them."
+  },
+  {
+    "objectID": "research/notes/gradient-descent-notes.html#overview",
+    "href": "research/notes/gradient-descent-notes.html#overview",
+    "title": "Research Notes: Gradient Descent Variations",
+    "section": "",
+    "text": "Quick notes on various gradient descent algorithms and when to use them."
+  },
+  {
+    "objectID": "research/notes/gradient-descent-notes.html#algorithms",
+    "href": "research/notes/gradient-descent-notes.html#algorithms",
+    "title": "Research Notes: Gradient Descent Variations",
+    "section": "Algorithms",
+    "text": "Algorithms\n\nStochastic Gradient Descent (SGD)\n\nSimple and fast\nNoisy updates\nGood for large datasets\n\n\n\nAdam\n\nAdaptive learning rates\nMomentum-based\nCurrently most popular\n\n\n\nRMSprop\n\nGood for recurrent networks\nAdapts learning rate per parameter"
+  },
+  {
+    "objectID": "research/notes/gradient-descent-notes.html#performance-comparison",
+    "href": "research/notes/gradient-descent-notes.html#performance-comparison",
+    "title": "Research Notes: Gradient Descent Variations",
+    "section": "Performance Comparison",
+    "text": "Performance Comparison\n\n\n\nAlgorithm\nSpeed\nMemory\nConvergence\n\n\n\n\nSGD\nFast\nLow\nModerate\n\n\nAdam\nMed\nHigh\nFast\n\n\nRMSprop\nMed\nMed\nGood"
+  },
+  {
+    "objectID": "research/notes/gradient-descent-notes.html#personal-observations",
+    "href": "research/notes/gradient-descent-notes.html#personal-observations",
+    "title": "Research Notes: Gradient Descent Variations",
+    "section": "Personal Observations",
+    "text": "Personal Observations\nFrom my experiments, Adam works well for most cases, but SGD with a good learning rate schedule can match or exceed its performance."
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html",
+    "href": "research/papers/attention-paper-summary.html",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "",
+    "text": "The 2017 paper “Attention Is All You Need” by Vaswani et al. introduced the Transformer architecture, revolutionizing NLP."
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#overview",
+    "href": "research/papers/attention-paper-summary.html#overview",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "",
+    "text": "The 2017 paper “Attention Is All You Need” by Vaswani et al. introduced the Transformer architecture, revolutionizing NLP."
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#key-contributions",
+    "href": "research/papers/attention-paper-summary.html#key-contributions",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "Key Contributions",
+    "text": "Key Contributions\n\nSelf-Attention Mechanism: Allows the model to weigh the importance of different words\nPositional Encoding: Captures sequence order without recurrence\nMulti-Head Attention: Enables learning different representation subspaces"
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#architecture",
+    "href": "research/papers/attention-paper-summary.html#architecture",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "Architecture",
+    "text": "Architecture\nThe Transformer consists of:\n\nEncoder: Processes the input sequence\nDecoder: Generates the output sequence\nAttention Layers: Connect encoder and decoder"
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#mathematical-foundation",
+    "href": "research/papers/attention-paper-summary.html#mathematical-foundation",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "Mathematical Foundation",
+    "text": "Mathematical Foundation\nThe attention mechanism is defined as:\n\\[\n\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\n\\]"
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#impact",
+    "href": "research/papers/attention-paper-summary.html#impact",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "Impact",
+    "text": "Impact\nThis architecture became the foundation for: - BERT - GPT series - T5 - And many more modern language models"
+  },
+  {
+    "objectID": "research/papers/attention-paper-summary.html#references",
+    "href": "research/papers/attention-paper-summary.html#references",
+    "title": "Attention Is All You Need - Paper Summary",
+    "section": "References",
+    "text": "References\nVaswani et al. (2017). “Attention Is All You Need”. NeurIPS."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Research papers, academic work, and research notes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttention Is All You Need - Paper Summary\n\n\n\nresearch\n\npapers\n\nnlp\n\ntransformers\n\n\n\nSummary and analysis of the groundbreaking transformer paper\n\n\n\n\n\nDec 8, 2024\n\n\nAlex Shao\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Notes: Gradient Descent Variations\n\n\n\nresearch\n\nnotes\n\noptimization\n\n\n\nComparing different gradient descent optimization algorithms\n\n\n\n\n\nDec 5, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "technical/machine-learning/neural-networks-intro.html",
+    "href": "technical/machine-learning/neural-networks-intro.html",
+    "title": "Introduction to Neural Networks",
+    "section": "",
+    "text": "Neural networks are the foundation of modern deep learning. In this post, we’ll explore the basics of how they work."
+  },
+  {
+    "objectID": "technical/machine-learning/neural-networks-intro.html#introduction",
+    "href": "technical/machine-learning/neural-networks-intro.html#introduction",
+    "title": "Introduction to Neural Networks",
+    "section": "",
+    "text": "Neural networks are the foundation of modern deep learning. In this post, we’ll explore the basics of how they work."
+  },
+  {
+    "objectID": "technical/machine-learning/neural-networks-intro.html#what-is-a-neural-network",
+    "href": "technical/machine-learning/neural-networks-intro.html#what-is-a-neural-network",
+    "title": "Introduction to Neural Networks",
+    "section": "What is a Neural Network?",
+    "text": "What is a Neural Network?\nA neural network is a computing system inspired by biological neural networks. It consists of interconnected nodes (neurons) organized in layers:\n\nInput Layer: Receives the initial data\nHidden Layers: Process the information\nOutput Layer: Produces the final result"
+  },
+  {
+    "objectID": "technical/machine-learning/neural-networks-intro.html#example-code",
+    "href": "technical/machine-learning/neural-networks-intro.html#example-code",
+    "title": "Introduction to Neural Networks",
+    "section": "Example Code",
+    "text": "Example Code\nimport numpy as np\n\nclass SimpleNeuralNetwork:\n    def __init__(self, input_size, hidden_size, output_size):\n        self.W1 = np.random.randn(input_size, hidden_size)\n        self.W2 = np.random.randn(hidden_size, output_size)\n    \n    def forward(self, X):\n        self.hidden = np.tanh(X @ self.W1)\n        output = self.hidden @ self.W2\n        return output"
+  },
+  {
+    "objectID": "technical/machine-learning/neural-networks-intro.html#conclusion",
+    "href": "technical/machine-learning/neural-networks-intro.html#conclusion",
+    "title": "Introduction to Neural Networks",
+    "section": "Conclusion",
+    "text": "Conclusion\nNeural networks are powerful tools for machine learning. Stay tuned for more advanced topics!"
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html",
+    "href": "technical/web-development/fastapi-tutorial.html",
+    "title": "Building a REST API with FastAPI",
+    "section": "",
+    "text": "FastAPI is a modern, fast web framework for building APIs with Python. Let’s build a simple API together."
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html#introduction",
+    "href": "technical/web-development/fastapi-tutorial.html#introduction",
+    "title": "Building a REST API with FastAPI",
+    "section": "",
+    "text": "FastAPI is a modern, fast web framework for building APIs with Python. Let’s build a simple API together."
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html#setting-up",
+    "href": "technical/web-development/fastapi-tutorial.html#setting-up",
+    "title": "Building a REST API with FastAPI",
+    "section": "Setting Up",
+    "text": "Setting Up\nFirst, install FastAPI:\npip install fastapi uvicorn"
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html#creating-your-first-endpoint",
+    "href": "technical/web-development/fastapi-tutorial.html#creating-your-first-endpoint",
+    "title": "Building a REST API with FastAPI",
+    "section": "Creating Your First Endpoint",
+    "text": "Creating Your First Endpoint\nHere’s a simple example:\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Hello World\"}\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}"
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html#running-the-server",
+    "href": "technical/web-development/fastapi-tutorial.html#running-the-server",
+    "title": "Building a REST API with FastAPI",
+    "section": "Running the Server",
+    "text": "Running the Server\nuvicorn main:app --reload"
+  },
+  {
+    "objectID": "technical/web-development/fastapi-tutorial.html#next-steps",
+    "href": "technical/web-development/fastapi-tutorial.html#next-steps",
+    "title": "Building a REST API with FastAPI",
+    "section": "Next Steps",
+    "text": "Next Steps\nIn future posts, we’ll cover: - Database integration - Authentication - Testing strategies"
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html",
+    "href": "personal/reflections/2024-year-review.html",
+    "title": "Reflections on 2024",
+    "section": "",
+    "text": "As 2024 comes to a close, I wanted to take a moment to reflect on the journey."
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html#looking-back",
+    "href": "personal/reflections/2024-year-review.html#looking-back",
+    "title": "Reflections on 2024",
+    "section": "",
+    "text": "As 2024 comes to a close, I wanted to take a moment to reflect on the journey."
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html#what-went-well",
+    "href": "personal/reflections/2024-year-review.html#what-went-well",
+    "title": "Reflections on 2024",
+    "section": "What Went Well",
+    "text": "What Went Well\n\nStarted this blog\nLearned new technologies\nConnected with amazing people\nMade progress on personal projects"
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html#challenges",
+    "href": "personal/reflections/2024-year-review.html#challenges",
+    "title": "Reflections on 2024",
+    "section": "Challenges",
+    "text": "Challenges\nEvery year has its challenges, and this one was no exception. The key is learning from them."
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html#goals-for-2025",
+    "href": "personal/reflections/2024-year-review.html#goals-for-2025",
+    "title": "Reflections on 2024",
+    "section": "Goals for 2025",
+    "text": "Goals for 2025\n\nWrite more consistently\nContribute to open source\nDeep dive into LLMs and AI\nRead 20 technical books"
+  },
+  {
+    "objectID": "personal/reflections/2024-year-review.html#gratitude",
+    "href": "personal/reflections/2024-year-review.html#gratitude",
+    "title": "Reflections on 2024",
+    "section": "Gratitude",
+    "text": "Gratitude\nThanks to everyone who has supported me this year. Here’s to continued growth in 2025!"
+  },
+  {
+    "objectID": "math/index.html",
+    "href": "math/index.html",
+    "title": "Math",
+    "section": "",
+    "text": "Mathematical concepts, proofs, statistics, and computational mathematics.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "miscellaneous/index.html",
+    "href": "miscellaneous/index.html",
+    "title": "Miscellaneous",
+    "section": "",
+    "text": "Everything else - thoughts, reflections, and topics that don’t fit neatly into other categories.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "programming/index.html",
+    "href": "programming/index.html",
+    "title": "Programming",
+    "section": "",
+    "text": "Programming posts covering algorithms, languages, software engineering, and development.\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

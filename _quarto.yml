@@ -1,23 +1,32 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   description: "A blog built with Quarto"
-  site-url: https://alexshaoo.github.io # you must change this appropriately for RSS feeds to work properly
-  title: "alexshaoo.github.io"
+  site-url: https://alexshaoo.github.io
+  title: "Alex Shao's Blog"
   navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Programming"
+        href: programming/index.qmd
+      - text: "Math"
+        href: math/index.qmd
+      - text: "Miscellaneous"
+        href: miscellaneous/index.qmd
+      - text: "About"
+        href: about.qmd
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/alexshaoo
+
 format:
   html:
     theme:
       - cosmo
-      - brand
     css: styles.css
-
-
+    toc: true
+    page-layout: article
 

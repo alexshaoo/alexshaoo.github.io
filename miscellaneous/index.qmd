@@ -1,0 +1,11 @@
+---
+title: "Miscellaneous"
+listing:
+  contents: "**/*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+page-layout: full
+---
+
+Everything else - thoughts, reflections, and topics that don't fit neatly into other categories.
