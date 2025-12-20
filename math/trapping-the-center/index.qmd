@@ -1,0 +1,124 @@
+---
+title: "Trapping the Center: A Journey into Geometric Probability"
+author: "Alex Shao"
+date: "2025-12-18"
+categories: [math, probability, geometry]
+format:
+  html:
+    css: styles.css
+    code-fold: true
+description: "What is the probability that n random points on a circle contain the center?"
+---
+
+Imagine you have a circular piece of plywood. You randomly hammer 6 nails into the very edge of the circle. If you wrap a rubber band around those nails, what are the odds that the center of the wood is trapped inside that rubber band?
+
+This is a pretty classic problem in the field of geometric probability. The idea was inspired by a video I saw online, but a detailed write-up can also be found at [Brainstellar](https://brainstellar.com/puzzles/211) (along with some other really interesting puzzles!)
+
+## Interactive Simulation
+
+```{ojs}
+//| echo: false
+import { createInteractiveCircle } from "./visualization.js"
+
+app = {
+  // 1. Setup the Layout
+  const container = html`<div style="display: flex; flex-direction: column; align-items: center;">
+    <div class="controls-container">
+       <div id="slider-container"></div>
+       <button class="randomize-btn">Randomize Positions</button>
+    </div>
+    <div id="canvas-container"></div>
+  </div>`;
+
+  const sliderContainer = container.querySelector("#slider-container");
+  const canvasContainer = container.querySelector("#canvas-container");
+  const randBtn = container.querySelector("button");
+
+  // 2. State Variables
+  let currentLogic = null; 
+  
+  // 3. Helper to Create/Reset the Canvas
+  function updateCanvas(n, mode) {
+    canvasContainer.innerHTML = ""; // Clear existing canvas
+    const c = DOM.canvas(400, 400);
+    canvasContainer.appendChild(c);
+    
+    // Create new logic and store it
+    currentLogic = createInteractiveCircle(c, n, mode);
+  }
+
+  // 4. Initialize Slider
+  const sliderWrapper = Inputs.range([3, 12], {value: 6, step: 1, label: "Points (n)"});
+  sliderContainer.appendChild(sliderWrapper);
+
+  // *** THE FIX *** // We must grab the actual <input> tag inside the wrapper to get .valueAsNumber
+  const rangeInput = sliderWrapper.querySelector("input");
+
+  // 5. Event Listener: Slider Change
+  rangeInput.addEventListener("input", () => {
+    // Now we get the correct number (e.g., 6) instead of undefined
+    updateCanvas(rangeInput.valueAsNumber, "even");
+  });
+
+  // 6. Event Listener: Button Click
+  randBtn.onclick = () => {
+    if (currentLogic) {
+      currentLogic.randomize();
+    }
+  };
+
+  // 7. Initial Render
+  updateCanvas(6, "even");
+
+  return container;
+}
+```
+
+## The Mathematical Derivation
+
+Instead of calculating the probability of the center being *inside*, we calculate the probability of the **complement**: the center being **outside**.
+
+### 1. The Semicircle Condition
+
+The center of the circle lies outside the polygon if and only if all points lie within the same arc (a semicircle).
+
+### 2. Fixing a Boundary
+
+Pick any point and assume it is the "leftmost" point of a semicircle.
+
+* For the center to be outside, the other points must land in the arc starting from.
+* The probability for each point is.
+* Total probability for this specific point:.
+
+### 3. Symmetry
+
+There are points that could serve as this "boundary" point. Since these events are mutually exclusive, we multiply:
+
+
+### 4. Final Result
+
+For:
+
+$$
+P(n) = \frac{n-1}{2^{n-1}}
+$$
+
+### Derivation
+
+[Add your mathematical derivation here]
+
+## Results
+
+| Points | Probability |
+|--------|-------------|
+| 3      | 25.0%       |
+| 4      | 37.5%       |
+| 5      | 50.0%       |
+| 6      | 62.5%       |
+| 10     | 87.9%       |
+
+As $n \to \infty$, the probability approaches 1.
+
+## Conclusion
+
+This problem beautifully demonstrates how geometric intuition connects to discrete probability. The interactive visualization above lets you explore different values of $n$ and see the pattern emerge.

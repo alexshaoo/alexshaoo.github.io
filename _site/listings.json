@@ -11,7 +11,8 @@
       "/about.html",
       "/math/index.html",
       "/miscellaneous/index.html",
-      "/programming/index.html"
+      "/programming/index.html",
+      "/math/trapping-the-center/index.html"
     ]
   },
   {
@@ -30,7 +31,9 @@
   },
   {
     "listing": "/math/index.html",
-    "items": []
+    "items": [
+      "/math/trapping-the-center/index.html"
+    ]
   },
   {
     "listing": "/miscellaneous/index.html",
