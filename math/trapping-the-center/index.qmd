@@ -21,7 +21,7 @@ This is a pretty classic problem in the field of geometric probability. The idea
 import { createInteractiveCircle } from "./visualization.js"
 
 app = {
-  // layout setup
+  // 1. Setup Layout
   const container = html`<div style="display: flex; flex-direction: column; align-items: center;">
     <div class="controls-container">
        <div id="slider-container"></div>
@@ -34,34 +34,91 @@ app = {
   const canvasContainer = container.querySelector("#canvas-container");
   const randBtn = container.querySelector("button");
 
+  // 2. State Variables
   let currentLogic = null; 
+  let currentN = 6; // Keep track of the last valid N
   
+  // 3. Helper to Create/Reset Canvas
   function updateCanvas(n, mode) {
+    // IMPORTANT: Dispose of old logic to remove event listeners
+    if (currentLogic) currentLogic.dispose();
+    
     canvasContainer.innerHTML = "";
     const c = DOM.canvas(400, 400);
     canvasContainer.appendChild(c);
     
     currentLogic = createInteractiveCircle(c, n, mode);
+    currentN = n;
   }
 
-  // slider
+  // 4. Initialize Controls
   const sliderWrapper = Inputs.range([3, 12], {value: 6, step: 1, label: "Points (n)"});
   sliderContainer.appendChild(sliderWrapper);
 
-  const rangeInput = sliderWrapper.querySelector("input");
+  const rangeInput = sliderWrapper.querySelector("input[type='range']");
+  const numberInput = sliderWrapper.querySelector("input[type='number']");
 
-  // slider change
-  rangeInput.addEventListener("input", () => {
-    updateCanvas(rangeInput.valueAsNumber, "even");
+  // 5. Validation Function
+  // Returns valid integer or null if invalid
+  function parseAndValidate(value) {
+    const num = Number(value);
+    
+    // Check 1: Must be a number and an integer (no decimals like 3.4)
+    if (isNaN(num) || !Number.isInteger(num)) return null;
+    
+    // Check 2: Range [3, 12]
+    if (num < 3 || num > 12) return null;
+    
+    return num;
+  }
+
+  // 6. Handle Number Input Changes
+  numberInput.addEventListener("input", () => {
+    const val = parseAndValidate(numberInput.value);
+    
+    if (val !== null) {
+      // Valid Input: Sync slider, clear error, update canvas
+      numberInput.style.border = "";
+      numberInput.style.outline = "";
+      rangeInput.value = val;
+      updateCanvas(val, "even");
+    } else {
+      // Invalid Input: Red border, DO NOT update canvas
+      numberInput.style.border = "2px solid red";
+      numberInput.style.outline = "none";
+    }
   });
 
-  // button click
-  randBtn.onclick = () => {
-    if (currentLogic) {
-      currentLogic.randomize();
+  // 7. Handle Slider Changes
+  // Slider is naturally constrained, so we trust it updates the number input
+  rangeInput.addEventListener("input", () => {
+    const val = rangeInput.valueAsNumber;
+    numberInput.value = val;
+    
+    // Clear any previous error states from manual typing
+    numberInput.style.border = "";
+    numberInput.style.outline = "";
+    
+    updateCanvas(val, "even");
+  });
+  
+  // 8. Handle Blur (Reset if invalid)
+  numberInput.addEventListener("blur", () => {
+    const val = parseAndValidate(numberInput.value);
+    if (val === null) {
+      // Revert to last known valid state
+      numberInput.value = currentN;
+      numberInput.style.border = "";
+      numberInput.style.outline = "";
     }
+  });
+
+  // 9. Randomize Button
+  randBtn.onclick = () => {
+    if (currentLogic) currentLogic.randomize();
   };
 
+  // 10. Initial Render
   updateCanvas(6, "even");
 
   return container;

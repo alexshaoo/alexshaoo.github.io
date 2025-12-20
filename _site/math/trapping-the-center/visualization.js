@@ -5,6 +5,7 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
   let points = [];
   let draggedIdx = null;
 
+  // Theme detection
   const isDarkMode = () => document.body.classList.contains('quarto-dark') || 
                            window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -31,6 +32,7 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const dark = isDarkMode();
     
+    // Check if center is trapped (no gap > PI)
     let isInside = true;
     for (let i = 0; i < points.length; i++) {
       const next = (i + 1) % points.length;
@@ -54,16 +56,21 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
 
     // Draw Polygon
     ctx.beginPath();
-    points.forEach((p, i) => {
-      const pos = getXY(p.angle);
-      i === 0 ? ctx.moveTo(pos.x, pos.y) : ctx.lineTo(pos.x, pos.y);
-    });
-    ctx.closePath();
-    ctx.fillStyle = colors.fill;
-    ctx.fill();
-    ctx.strokeStyle = colors.stroke;
-    ctx.lineWidth = 3;
-    ctx.stroke();
+    if (points.length > 0) {
+      const start = getXY(points[0].angle);
+      ctx.moveTo(start.x, start.y);
+      points.forEach((p, i) => {
+        if (i === 0) return;
+        const pos = getXY(p.angle);
+        ctx.lineTo(pos.x, pos.y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = colors.fill;
+      ctx.fill();
+      ctx.strokeStyle = colors.stroke;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+    }
 
     // Draw Center
     ctx.beginPath();
@@ -84,7 +91,8 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
     });
   }
 
-  canvas.onmousedown = (e) => {
+  // Event Handlers
+  const onMouseDown = (e) => {
     const rect = canvas.getBoundingClientRect();
     const mx = e.clientX - rect.left;
     const my = e.clientY - rect.top;
@@ -94,7 +102,7 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
     });
   };
 
-  window.onmousemove = (e) => {
+  const onMouseMove = (e) => {
     if (draggedIdx === null) return;
     const rect = canvas.getBoundingClientRect();
     const angle = normalize(Math.atan2(e.clientY - rect.top - center.y, e.clientX - rect.left - center.x));
@@ -102,7 +110,7 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
     const prev = points[(draggedIdx - 1 + points.length) % points.length].angle;
     const next = points[(draggedIdx + 1) % points.length].angle;
 
-    // Boundary check to prevent passing neighbors
+    // Constraint: Point cannot cross its neighbors
     let canMove = false;
     if (prev < next) {
       if (angle > prev && angle < next) canMove = true;
@@ -116,9 +124,23 @@ export function createInteractiveCircle(canvas, n, initialMode = "even") {
     }
   };
 
-  window.onmouseup = () => draggedIdx = null;
+  const onMouseUp = () => draggedIdx = null;
+
+  // Attach Listeners
+  canvas.addEventListener("mousedown", onMouseDown);
+  window.addEventListener("mousemove", onMouseMove);
+  window.addEventListener("mouseup", onMouseUp);
 
   initPoints(initialMode);
   draw();
-  return { randomize: () => { initPoints("random"); draw(); } };
+
+  return { 
+    randomize: () => { initPoints("random"); draw(); },
+    // REQUIRED: Cleans up listeners when we destroy the canvas
+    dispose: () => {
+      canvas.removeEventListener("mousedown", onMouseDown);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+    }
+  };
 }
