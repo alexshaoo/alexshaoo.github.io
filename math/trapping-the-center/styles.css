@@ -1,4 +1,4 @@
-/* Layout adjustments */
+/* Layout */
 .quarto-layout-cell {
   display: flex;
   align-items: center;
@@ -7,14 +7,12 @@
 
 canvas {
   display: block;
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 100%;
   height: auto;
 }
 
-/* --- NEW ADDITIONS BELOW --- */
-
-/* Container for the slider and button */
+/* Controls Container */
 .controls-container {
   display: flex; 
   gap: 20px; 
@@ -22,7 +20,7 @@ canvas {
   margin-bottom: 20px;
 }
 
-/* Custom styling for the OJS button */
+/* Button Styling */
 .randomize-btn {
   background-color: white !important;
   color: black !important;
@@ -36,7 +34,7 @@ canvas {
   transition: all 0.1s ease-in-out !important;
   box-shadow: none !important;
   outline: none !important;
-  height: auto !important; /* Overrides default input height if necessary */
+  height: auto !important;
 }
 
 .randomize-btn:hover {

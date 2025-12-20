@@ -21,7 +21,7 @@ This is a pretty classic problem in the field of geometric probability. The idea
 import { createInteractiveCircle } from "./visualization.js"
 
 app = {
-  // 1. Setup the Layout
+  // layout setup
   const container = html`<div style="display: flex; flex-direction: column; align-items: center;">
     <div class="controls-container">
        <div id="slider-container"></div>
@@ -34,40 +34,34 @@ app = {
   const canvasContainer = container.querySelector("#canvas-container");
   const randBtn = container.querySelector("button");
 
-  // 2. State Variables
   let currentLogic = null; 
   
-  // 3. Helper to Create/Reset the Canvas
   function updateCanvas(n, mode) {
-    canvasContainer.innerHTML = ""; // Clear existing canvas
+    canvasContainer.innerHTML = "";
     const c = DOM.canvas(400, 400);
     canvasContainer.appendChild(c);
     
-    // Create new logic and store it
     currentLogic = createInteractiveCircle(c, n, mode);
   }
 
-  // 4. Initialize Slider
+  // slider
   const sliderWrapper = Inputs.range([3, 12], {value: 6, step: 1, label: "Points (n)"});
   sliderContainer.appendChild(sliderWrapper);
 
-  // *** THE FIX *** // We must grab the actual <input> tag inside the wrapper to get .valueAsNumber
   const rangeInput = sliderWrapper.querySelector("input");
 
-  // 5. Event Listener: Slider Change
+  // slider change
   rangeInput.addEventListener("input", () => {
-    // Now we get the correct number (e.g., 6) instead of undefined
     updateCanvas(rangeInput.valueAsNumber, "even");
   });
 
-  // 6. Event Listener: Button Click
+  // button click
   randBtn.onclick = () => {
     if (currentLogic) {
       currentLogic.randomize();
     }
   };
 
-  // 7. Initial Render
   updateCanvas(6, "even");
 
   return container;
