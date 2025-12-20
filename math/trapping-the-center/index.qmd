@@ -21,26 +21,36 @@ This is a pretty classic problem in the field of geometric probability. The idea
 import { createInteractiveCircle } from "./visualization.js"
 
 app = {
-  // 1. Setup Layout
-  const container = html`<div style="display: flex; flex-direction: column; align-items: center;">
-    <div class="controls-container">
-       <div id="slider-container"></div>
-       <button class="randomize-btn">Randomize Positions</button>
+  // 1. Setup Layout with RAW HTML Inputs
+  // We manually create the inputs so we control exactly how they sync
+  const container = html`<div style="display: flex; flex-direction: column; align-items: center; font-family: sans-serif;">
+    
+    <div class="controls-container" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+       
+       <label style="font-weight: 500; font-size: 14px;">Points (n)</label>
+       
+       <input type="range" id="slider-input" min="3" max="12" step="1" value="6" style="width: 120px; cursor: pointer;">
+       
+       <input type="number" id="number-input" min="3" max="12" value="6" style="width: 50px; padding: 4px; border: 1px solid #ccc; border-radius: 4px;">
+       
+       <button class="randomize-btn" style="margin-left: 10px;">Randomize Positions</button>
     </div>
+
     <div id="canvas-container"></div>
   </div>`;
 
-  const sliderContainer = container.querySelector("#slider-container");
+  // 2. Select Elements
+  const rangeInput = container.querySelector("#slider-input");
+  const numberInput = container.querySelector("#number-input");
+  const randBtn = container.querySelector(".randomize-btn");
   const canvasContainer = container.querySelector("#canvas-container");
-  const randBtn = container.querySelector("button");
 
-  // 2. State Variables
+  // 3. State Variables
   let currentLogic = null; 
-  let currentN = 6; // Keep track of the last valid N
+  let currentN = 6; // The source of truth for the last valid state
   
-  // 3. Helper to Create/Reset Canvas
+  // 4. Helper: Update Canvas
   function updateCanvas(n, mode) {
-    // IMPORTANT: Dispose of old logic to remove event listeners
     if (currentLogic) currentLogic.dispose();
     
     canvasContainer.innerHTML = "";
@@ -51,74 +61,68 @@ app = {
     currentN = n;
   }
 
-  // 4. Initialize Controls
-  const sliderWrapper = Inputs.range([3, 12], {value: 6, step: 1, label: "Points (n)"});
-  sliderContainer.appendChild(sliderWrapper);
-
-  const rangeInput = sliderWrapper.querySelector("input[type='range']");
-  const numberInput = sliderWrapper.querySelector("input[type='number']");
-
-  // 5. Validation Function
-  // Returns valid integer or null if invalid
+  // 5. Validator
   function parseAndValidate(value) {
     const num = Number(value);
-    
-    // Check 1: Must be a number and an integer (no decimals like 3.4)
-    if (isNaN(num) || !Number.isInteger(num)) return null;
-    
-    // Check 2: Range [3, 12]
-    if (num < 3 || num > 12) return null;
-    
+    if (isNaN(num) || !Number.isInteger(num)) return null; // No decimals
+    if (num < 3 || num > 12) return null; // Strict bounds
     return num;
   }
 
-  // 6. Handle Number Input Changes
+  // 6. Event: SLIDER Input
+  // The slider is constrained by HTML attributes, so it's always valid.
+  rangeInput.addEventListener("input", () => {
+    const val = rangeInput.valueAsNumber;
+    
+    // Update State
+    currentN = val;
+    
+    // Sync Number Box
+    numberInput.value = val;
+    numberInput.style.border = "1px solid #ccc"; // Clear errors
+    numberInput.style.outline = "none";
+    
+    // Update Visual
+    updateCanvas(val, "even");
+  });
+
+  // 7. Event: NUMBER BOX Input
   numberInput.addEventListener("input", () => {
     const val = parseAndValidate(numberInput.value);
     
     if (val !== null) {
-      // Valid Input: Sync slider, clear error, update canvas
-      numberInput.style.border = "";
-      numberInput.style.outline = "";
-      rangeInput.value = val;
+      // VALID: Sync slider and update visual
+      numberInput.style.border = "1px solid #ccc";
+      numberInput.style.outline = "none";
+      
+      rangeInput.value = val; // Move slider to match
+      currentN = val;
       updateCanvas(val, "even");
     } else {
-      // Invalid Input: Red border, DO NOT update canvas
+      // INVALID: Error style, BUT DO NOT TOUCH THE SLIDER
       numberInput.style.border = "2px solid red";
+      numberInput.style.outline = "none";
+      // The slider remains at 'currentN', preventing the "jump" effect
+    }
+  });
+
+  // 8. Event: Blur (Cleanup)
+  numberInput.addEventListener("blur", () => {
+    const val = parseAndValidate(numberInput.value);
+    if (val === null) {
+      // If user leaves the box while it's invalid, revert to last truth
+      numberInput.value = currentN;
+      numberInput.style.border = "1px solid #ccc";
       numberInput.style.outline = "none";
     }
   });
 
-  // 7. Handle Slider Changes
-  // Slider is naturally constrained, so we trust it updates the number input
-  rangeInput.addEventListener("input", () => {
-    const val = rangeInput.valueAsNumber;
-    numberInput.value = val;
-    
-    // Clear any previous error states from manual typing
-    numberInput.style.border = "";
-    numberInput.style.outline = "";
-    
-    updateCanvas(val, "even");
-  });
-  
-  // 8. Handle Blur (Reset if invalid)
-  numberInput.addEventListener("blur", () => {
-    const val = parseAndValidate(numberInput.value);
-    if (val === null) {
-      // Revert to last known valid state
-      numberInput.value = currentN;
-      numberInput.style.border = "";
-      numberInput.style.outline = "";
-    }
-  });
-
-  // 9. Randomize Button
+  // 9. Event: Randomize
   randBtn.onclick = () => {
     if (currentLogic) currentLogic.randomize();
   };
 
-  // 10. Initial Render
+  // 10. Start
   updateCanvas(6, "even");
 
   return container;
