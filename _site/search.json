@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "personal/index.html",
-    "href": "personal/index.html",
-    "title": "Personal",
-    "section": "",
-    "text": "Personal reflections, life updates, and miscellaneous thoughts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReflections on 2024\n\n\n\npersonal\n\nreflections\n\nyear-review\n\n\n\nLooking back at the past year\n\n\n\n\n\nDec 18, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Alex Shao’s Blog",
@@ -18,98 +11,7 @@
     "href": "index.html#latest-posts",
     "title": "Alex Shao’s Blog",
     "section": "Latest Posts",
-    "text": "Latest Posts\n\n\n\n\n\n\n\n\n\n\nAbout\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMath\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\n\n\n\nDec 18, 2025\n\n5 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "technical/index.html",
-    "href": "technical/index.html",
-    "title": "Technical",
-    "section": "",
-    "text": "Technical posts covering programming, software engineering, and technology.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Neural Networks\n\n\n\ntechnical\n\nmachine-learning\n\nneural-networks\n\n\n\nA beginner’s guide to understanding neural networks\n\n\n\n\n\nDec 15, 2024\n\n\nAlex Shao\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding a REST API with FastAPI\n\n\n\ntechnical\n\nweb-development\n\npython\n\napi\n\n\n\nLearn how to create a modern REST API using FastAPI\n\n\n\n\n\nDec 10, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "research/notes/gradient-descent-notes.html",
-    "href": "research/notes/gradient-descent-notes.html",
-    "title": "Research Notes: Gradient Descent Variations",
-    "section": "",
-    "text": "Quick notes on various gradient descent algorithms and when to use them."
-  },
-  {
-    "objectID": "research/notes/gradient-descent-notes.html#overview",
-    "href": "research/notes/gradient-descent-notes.html#overview",
-    "title": "Research Notes: Gradient Descent Variations",
-    "section": "",
-    "text": "Quick notes on various gradient descent algorithms and when to use them."
-  },
-  {
-    "objectID": "research/notes/gradient-descent-notes.html#algorithms",
-    "href": "research/notes/gradient-descent-notes.html#algorithms",
-    "title": "Research Notes: Gradient Descent Variations",
-    "section": "Algorithms",
-    "text": "Algorithms\n\nStochastic Gradient Descent (SGD)\n\nSimple and fast\nNoisy updates\nGood for large datasets\n\n\n\nAdam\n\nAdaptive learning rates\nMomentum-based\nCurrently most popular\n\n\n\nRMSprop\n\nGood for recurrent networks\nAdapts learning rate per parameter"
-  },
-  {
-    "objectID": "research/notes/gradient-descent-notes.html#performance-comparison",
-    "href": "research/notes/gradient-descent-notes.html#performance-comparison",
-    "title": "Research Notes: Gradient Descent Variations",
-    "section": "Performance Comparison",
-    "text": "Performance Comparison\n\n\n\nAlgorithm\nSpeed\nMemory\nConvergence\n\n\n\n\nSGD\nFast\nLow\nModerate\n\n\nAdam\nMed\nHigh\nFast\n\n\nRMSprop\nMed\nMed\nGood"
-  },
-  {
-    "objectID": "research/notes/gradient-descent-notes.html#personal-observations",
-    "href": "research/notes/gradient-descent-notes.html#personal-observations",
-    "title": "Research Notes: Gradient Descent Variations",
-    "section": "Personal Observations",
-    "text": "Personal Observations\nFrom my experiments, Adam works well for most cases, but SGD with a good learning rate schedule can match or exceed its performance."
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html",
-    "href": "research/papers/attention-paper-summary.html",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "",
-    "text": "The 2017 paper “Attention Is All You Need” by Vaswani et al. introduced the Transformer architecture, revolutionizing NLP."
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#overview",
-    "href": "research/papers/attention-paper-summary.html#overview",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "",
-    "text": "The 2017 paper “Attention Is All You Need” by Vaswani et al. introduced the Transformer architecture, revolutionizing NLP."
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#key-contributions",
-    "href": "research/papers/attention-paper-summary.html#key-contributions",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "Key Contributions",
-    "text": "Key Contributions\n\nSelf-Attention Mechanism: Allows the model to weigh the importance of different words\nPositional Encoding: Captures sequence order without recurrence\nMulti-Head Attention: Enables learning different representation subspaces"
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#architecture",
-    "href": "research/papers/attention-paper-summary.html#architecture",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "Architecture",
-    "text": "Architecture\nThe Transformer consists of:\n\nEncoder: Processes the input sequence\nDecoder: Generates the output sequence\nAttention Layers: Connect encoder and decoder"
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#mathematical-foundation",
-    "href": "research/papers/attention-paper-summary.html#mathematical-foundation",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "Mathematical Foundation",
-    "text": "Mathematical Foundation\nThe attention mechanism is defined as:\n\\[\n\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\n\\]"
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#impact",
-    "href": "research/papers/attention-paper-summary.html#impact",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "Impact",
-    "text": "Impact\nThis architecture became the foundation for: - BERT - GPT series - T5 - And many more modern language models"
-  },
-  {
-    "objectID": "research/papers/attention-paper-summary.html#references",
-    "href": "research/papers/attention-paper-summary.html#references",
-    "title": "Attention Is All You Need - Paper Summary",
-    "section": "References",
-    "text": "References\nVaswani et al. (2017). “Attention Is All You Need”. NeurIPS."
+    "text": "Latest Posts\n\n\n\n\n\n\n\n\n\n\nAbout\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMath\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\n\n\n\nDec 18, 2025\n\n9 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -126,277 +28,11 @@
     "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
   },
   {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "Research papers, academic work, and research notes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttention Is All You Need - Paper Summary\n\n\n\nresearch\n\npapers\n\nnlp\n\ntransformers\n\n\n\nSummary and analysis of the groundbreaking transformer paper\n\n\n\n\n\nDec 8, 2024\n\n\nAlex Shao\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Notes: Gradient Descent Variations\n\n\n\nresearch\n\nnotes\n\noptimization\n\n\n\nComparing different gradient descent optimization algorithms\n\n\n\n\n\nDec 5, 2024\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "technical/machine-learning/neural-networks-intro.html",
-    "href": "technical/machine-learning/neural-networks-intro.html",
-    "title": "Introduction to Neural Networks",
-    "section": "",
-    "text": "Neural networks are the foundation of modern deep learning. In this post, we’ll explore the basics of how they work."
-  },
-  {
-    "objectID": "technical/machine-learning/neural-networks-intro.html#introduction",
-    "href": "technical/machine-learning/neural-networks-intro.html#introduction",
-    "title": "Introduction to Neural Networks",
-    "section": "",
-    "text": "Neural networks are the foundation of modern deep learning. In this post, we’ll explore the basics of how they work."
-  },
-  {
-    "objectID": "technical/machine-learning/neural-networks-intro.html#what-is-a-neural-network",
-    "href": "technical/machine-learning/neural-networks-intro.html#what-is-a-neural-network",
-    "title": "Introduction to Neural Networks",
-    "section": "What is a Neural Network?",
-    "text": "What is a Neural Network?\nA neural network is a computing system inspired by biological neural networks. It consists of interconnected nodes (neurons) organized in layers:\n\nInput Layer: Receives the initial data\nHidden Layers: Process the information\nOutput Layer: Produces the final result"
-  },
-  {
-    "objectID": "technical/machine-learning/neural-networks-intro.html#example-code",
-    "href": "technical/machine-learning/neural-networks-intro.html#example-code",
-    "title": "Introduction to Neural Networks",
-    "section": "Example Code",
-    "text": "Example Code\nimport numpy as np\n\nclass SimpleNeuralNetwork:\n    def __init__(self, input_size, hidden_size, output_size):\n        self.W1 = np.random.randn(input_size, hidden_size)\n        self.W2 = np.random.randn(hidden_size, output_size)\n    \n    def forward(self, X):\n        self.hidden = np.tanh(X @ self.W1)\n        output = self.hidden @ self.W2\n        return output"
-  },
-  {
-    "objectID": "technical/machine-learning/neural-networks-intro.html#conclusion",
-    "href": "technical/machine-learning/neural-networks-intro.html#conclusion",
-    "title": "Introduction to Neural Networks",
-    "section": "Conclusion",
-    "text": "Conclusion\nNeural networks are powerful tools for machine learning. Stay tuned for more advanced topics!"
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html",
-    "href": "technical/web-development/fastapi-tutorial.html",
-    "title": "Building a REST API with FastAPI",
-    "section": "",
-    "text": "FastAPI is a modern, fast web framework for building APIs with Python. Let’s build a simple API together."
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html#introduction",
-    "href": "technical/web-development/fastapi-tutorial.html#introduction",
-    "title": "Building a REST API with FastAPI",
-    "section": "",
-    "text": "FastAPI is a modern, fast web framework for building APIs with Python. Let’s build a simple API together."
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html#setting-up",
-    "href": "technical/web-development/fastapi-tutorial.html#setting-up",
-    "title": "Building a REST API with FastAPI",
-    "section": "Setting Up",
-    "text": "Setting Up\nFirst, install FastAPI:\npip install fastapi uvicorn"
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html#creating-your-first-endpoint",
-    "href": "technical/web-development/fastapi-tutorial.html#creating-your-first-endpoint",
-    "title": "Building a REST API with FastAPI",
-    "section": "Creating Your First Endpoint",
-    "text": "Creating Your First Endpoint\nHere’s a simple example:\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Hello World\"}\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}"
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html#running-the-server",
-    "href": "technical/web-development/fastapi-tutorial.html#running-the-server",
-    "title": "Building a REST API with FastAPI",
-    "section": "Running the Server",
-    "text": "Running the Server\nuvicorn main:app --reload"
-  },
-  {
-    "objectID": "technical/web-development/fastapi-tutorial.html#next-steps",
-    "href": "technical/web-development/fastapi-tutorial.html#next-steps",
-    "title": "Building a REST API with FastAPI",
-    "section": "Next Steps",
-    "text": "Next Steps\nIn future posts, we’ll cover: - Database integration - Authentication - Testing strategies"
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html",
-    "href": "personal/reflections/2024-year-review.html",
-    "title": "Reflections on 2024",
-    "section": "",
-    "text": "As 2024 comes to a close, I wanted to take a moment to reflect on the journey."
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html#looking-back",
-    "href": "personal/reflections/2024-year-review.html#looking-back",
-    "title": "Reflections on 2024",
-    "section": "",
-    "text": "As 2024 comes to a close, I wanted to take a moment to reflect on the journey."
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html#what-went-well",
-    "href": "personal/reflections/2024-year-review.html#what-went-well",
-    "title": "Reflections on 2024",
-    "section": "What Went Well",
-    "text": "What Went Well\n\nStarted this blog\nLearned new technologies\nConnected with amazing people\nMade progress on personal projects"
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html#challenges",
-    "href": "personal/reflections/2024-year-review.html#challenges",
-    "title": "Reflections on 2024",
-    "section": "Challenges",
-    "text": "Challenges\nEvery year has its challenges, and this one was no exception. The key is learning from them."
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html#goals-for-2025",
-    "href": "personal/reflections/2024-year-review.html#goals-for-2025",
-    "title": "Reflections on 2024",
-    "section": "Goals for 2025",
-    "text": "Goals for 2025\n\nWrite more consistently\nContribute to open source\nDeep dive into LLMs and AI\nRead 20 technical books"
-  },
-  {
-    "objectID": "personal/reflections/2024-year-review.html#gratitude",
-    "href": "personal/reflections/2024-year-review.html#gratitude",
-    "title": "Reflections on 2024",
-    "section": "Gratitude",
-    "text": "Gratitude\nThanks to everyone who has supported me this year. Here’s to continued growth in 2025!"
-  },
-  {
-    "objectID": "math/index.html",
-    "href": "math/index.html",
-    "title": "Math",
-    "section": "",
-    "text": "Mathematical concepts, proofs, statistics, and computational mathematics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\nWhat is the probability that n random points on a circle contain the center?\n\n\n\n\n\nDec 18, 2025\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "miscellaneous/index.html",
-    "href": "miscellaneous/index.html",
-    "title": "Miscellaneous",
-    "section": "",
-    "text": "Everything else - thoughts, reflections, and topics that don’t fit neatly into other categories.\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "programming/index.html",
-    "href": "programming/index.html",
-    "title": "Programming",
-    "section": "",
-    "text": "Programming posts covering algorithms, languages, software engineering, and development.\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "math/taylor-series.html",
-    "href": "math/taylor-series.html",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "",
-    "text": "Imagine you have a circular piece of plywood. You randomly hammer 6 nails into the very edge of the circle. If you wrap a rubber band around those nails, what are the odds that the center of the wood is trapped inside that rubber band?\nThis is a classic problem in the field of geometric probability. The idea was taken from a youtube video I found online, but can also be found here along with a selection of other super fun puzzles.\nAnyway, I’ve attached an interactive version of this puzzle. Feel free to play around with it however you like.\n//| echo: false // This is an Observable JS cell in Quarto viewof nPoints = Inputs.range([3, 12], {value: 6, step: 1, label: “Number of Points (n)”})\ncanvas = { const width = 400; const height = 400; const context = DOM.context2d(width, height); const radius = 150; const center = { x: width / 2, y: height / 2 };\n// Generate random points on the circumference const points = Array.from({ length: nPoints }, () =&gt; { const angle = Math.random() * Math.PI * 2; return { x: center.x + radius * Math.cos(angle), y: center.y + radius * Math.sin(angle), angle: angle }; }).sort((a, b) =&gt; a.angle - b.angle);\n// Logic: Check if center (0,0) is inside // A point is inside if all consecutive points form a gap &lt; PI let isInside = true; for (let i = 0; i &lt; points.length; i++) { const nextIdx = (i + 1) % points.length; let gap = points[nextIdx].angle - points[i].angle; if (gap &lt; 0) gap += Math.PI * 2; if (gap &gt; Math.PI) isInside = false; }\n// Drawing context.clearRect(0, 0, width, height);\n// Draw Circle context.beginPath(); context.arc(center.x, center.y, radius, 0, Math.PI * 2); context.strokeStyle = “#ccc”; context.stroke();\n// Draw Polygon context.beginPath(); context.moveTo(points[0].x, points[0].y); points.forEach(p =&gt; context.lineTo(p.x, p.y)); context.closePath(); context.fillStyle = isInside ? “rgba(76, 175, 80, 0.3)” : “rgba(244, 67, 54, 0.3)”; context.fill(); context.strokeStyle = isInside ? “#4CAF50” : “#F44336”; context.stroke();\n// Draw Center context.beginPath(); context.arc(center.x, center.y, 4, 0, Math.PI * 2); context.fillStyle = “black”; context.fill();\nreturn context.canvas; }"
-  },
-  {
-    "objectID": "math/taylor-series.html#introduction",
-    "href": "math/taylor-series.html#introduction",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Introduction",
-    "text": "Introduction\n\\[\n\\cos(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!} = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots\n\\]"
-  },
-  {
-    "objectID": "math/taylor-series.html#definition",
-    "href": "math/taylor-series.html#definition",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Definition",
-    "text": "Definition\nFor a function \\(f(x)\\) that is infinitely differentiable at point \\(a\\), the Taylor series is:\n\\[\nf(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\n\\]\nWhen \\(a = 0\\), this is called the Maclaurin series."
-  },
-  {
-    "objectID": "math/taylor-series.html#common-examples",
-    "href": "math/taylor-series.html#common-examples",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Common Examples",
-    "text": "Common Examples\n\nExponential Function\n\\[\ne^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\cdots\n\\]\n\n\nSine Function\n\\[\n\\sin(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots\n\\]\n\n\nCosine Function\n\\[\n\\cos(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!} = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots\n\\]"
-  },
-  {
-    "objectID": "math/taylor-series.html#applications",
-    "href": "math/taylor-series.html#applications",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Applications",
-    "text": "Applications\nTaylor series are used in:\n\nNumerical approximations - Computing values of transcendental functions\nPhysics - Linearizing equations near equilibrium points"
-  },
-  {
-    "objectID": "math/taylor-series.html#visual-example",
-    "href": "math/taylor-series.html#visual-example",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Visual Example",
-    "text": "Visual Example\nConsider approximating \\(e^x\\) near \\(x = 0\\):\n\n\n\nOrder\nApproximation\nValue at \\(x=1\\)\n\n\n\n\n0\n\\(1\\)\n1.000\n\n\n1\n\\(1 + x\\)\n2.000\n\n\n2\n\\(1 + x + \\frac{x^2}{2}\\)\n2.500\n\n\n3\n\\(1 + x + \\frac{x^2}{2} + \\frac{x^3}{6}\\)\n2.667\n\n\n∞\n\\(e^x\\)\n2.718…"
-  },
-  {
-    "objectID": "math/taylor-series.html#convergence",
-    "href": "math/taylor-series.html#convergence",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Convergence",
-    "text": "Convergence"
-  },
-  {
-    "objectID": "math/taylor-series.html#conclusion",
-    "href": "math/taylor-series.html#conclusion",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Conclusion",
-    "text": "Conclusion\nTaylor series bridge the gap between polynomials and more complex functions, making them invaluable for both theoretical and practical mathematics."
-  },
-  {
-    "objectID": "math/geometric-probability/index.html",
-    "href": "math/geometric-probability/index.html",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "",
-    "text": "Imagine you have a circular piece of plywood. You randomly hammer 6 nails into the very edge of the circle. If you wrap a rubber band around those nails, what are the odds that the center of the wood is trapped inside that rubber band?\nThis is a classic problem in the field of geometric probability. The idea was taken from a youtube video I found online, but can also be found here along with a selection of other super fun puzzles.\nAnyway, I’ve attached an interactive version of this puzzle. Feel free to play around with it however you like.\nviewof nPoints = Inputs.range([3, 12], {value: 6, step: 1, label: \"Number of Points (n)\"})\n\ncanvas = {\n  const width = 400;\n  const height = 400;\n  const context = DOM.context2d(width, height);\n  const radius = 150;\n  const center = { x: width / 2, y: height / 2 };\n\n  // Generate random points on the circumference\n  const points = Array.from({ length: nPoints }, () =&gt; {\n    const angle = Math.random() * Math.PI * 2;\n    return {\n      x: center.x + radius * Math.cos(angle),\n      y: center.y + radius * Math.sin(angle),\n      angle: angle\n    };\n  }).sort((a, b) =&gt; a.angle - b.angle);\n\n  // Check if center is inside: all consecutive gaps must be &lt; PI\n  let isInside = true;\n  for (let i = 0; i &lt; points.length; i++) {\n    const nextIdx = (i + 1) % points.length;\n    let gap = points[nextIdx].angle - points[i].angle;\n    if (gap &lt; 0) gap += Math.PI * 2;\n    if (gap &gt; Math.PI) isInside = false;\n  }\n\n  // Drawing\n  context.clearRect(0, 0, width, height);\n  \n  // Draw Circle\n  context.beginPath();\n  context.arc(center.x, center.y, radius, 0, Math.PI * 2);\n  context.strokeStyle = \"#ccc\";\n  context.stroke();\n\n  // Draw Polygon\n  context.beginPath();\n  context.moveTo(points[0].x, points[0].y);\n  points.forEach(p =&gt; context.lineTo(p.x, p.y));\n  context.closePath();\n  context.fillStyle = isInside ? \"rgba(76, 175, 80, 0.3)\" : \"rgba(244, 67, 54, 0.3)\";\n  context.fill();\n  context.strokeStyle = isInside ? \"#4CAF50\" : \"#F44336\";\n  context.stroke();\n\n  // Draw Center\n  context.beginPath();\n  context.arc(center.x, center.y, 4, 0, Math.PI * 2);\n  context.fillStyle = \"black\";\n  context.fill();\n\n  return context.canvas;\n}"
-  },
-  {
-    "objectID": "math/geometric-probability/index.html#the-problem",
-    "href": "math/geometric-probability/index.html#the-problem",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "The Problem",
-    "text": "The Problem\nGiven \\(n\\) random points uniformly distributed on the circumference of a circle, what is the probability that their convex hull (the polygon formed by connecting them) contains the center?"
-  },
-  {
-    "objectID": "math/geometric-probability/index.html#solution",
-    "href": "math/geometric-probability/index.html#solution",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Solution",
-    "text": "Solution\nThe key insight: the center is contained if and only if no two consecutive points are more than 180° apart.\nFor \\(n\\) points, the probability is:\n\\[\nP(n) = \\frac{n-1}{2^{n-1}}\n\\]\n\nDerivation\n[Add your mathematical derivation here]"
-  },
-  {
-    "objectID": "math/geometric-probability/index.html#results",
-    "href": "math/geometric-probability/index.html#results",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Results",
-    "text": "Results\n\n\n\nPoints\nProbability\n\n\n\n\n3\n25.0%\n\n\n4\n37.5%\n\n\n5\n50.0%\n\n\n6\n62.5%\n\n\n10\n87.9%\n\n\n\nAs \\(n \\to \\infty\\), the probability approaches 1."
-  },
-  {
-    "objectID": "math/geometric-probability/index.html#conclusion",
-    "href": "math/geometric-probability/index.html#conclusion",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis problem beautifully demonstrates how geometric intuition connects to discrete probability. The interactive visualization above lets you explore different values of \\(n\\) and see the pattern emerge."
-  },
-  {
     "objectID": "math/trapping-the-center/index.html",
     "href": "math/trapping-the-center/index.html",
     "title": "Trapping the Center: A Journey into Geometric Probability",
     "section": "",
     "text": "Imagine you have a circular piece of plywood. You randomly hammer 6 nails into the very edge of the circle. If you wrap a rubber band around those nails, what are the odds that the center of the wood is trapped inside that rubber band?\nThis is a pretty classic problem in the field of geometric probability. The idea was inspired by a video I saw online, but a detailed write-up can also be found at Brainstellar (along with some other really interesting puzzles!)"
-  },
-  {
-    "objectID": "math/trapping-the-center/index.html#the-problem",
-    "href": "math/trapping-the-center/index.html#the-problem",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "The Problem",
-    "text": "The Problem\nGiven \\(n\\) random points uniformly distributed on the circumference of a circle, what is the probability that their convex hull (the polygon formed by connecting them) contains the center?"
-  },
-  {
-    "objectID": "math/trapping-the-center/index.html#solution",
-    "href": "math/trapping-the-center/index.html#solution",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Solution",
-    "text": "Solution\nThe key insight: the center is contained if and only if no two consecutive points are more than 180° apart.\nFor \\(n\\) points, the probability is:\n\\[\nP(n) = \\frac{n-1}{2^{n-1}}\n\\]\n\nDerivation\n[Add your mathematical derivation here]"
-  },
-  {
-    "objectID": "math/trapping-the-center/index.html#results",
-    "href": "math/trapping-the-center/index.html#results",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Results",
-    "text": "Results\n\n\n\nPoints\nProbability\n\n\n\n\n3\n25.0%\n\n\n4\n37.5%\n\n\n5\n50.0%\n\n\n6\n62.5%\n\n\n10\n87.9%\n\n\n\nAs \\(n \\to \\infty\\), the probability approaches 1."
-  },
-  {
-    "objectID": "math/trapping-the-center/index.html#conclusion",
-    "href": "math/trapping-the-center/index.html#conclusion",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis problem beautifully demonstrates how geometric intuition connects to discrete probability. The interactive visualization above lets you explore different values of \\(n\\) and see the pattern emerge."
   },
   {
     "objectID": "math/trapping-the-center/index.html#interactive-simulation",
@@ -410,20 +46,48 @@
     "href": "math/trapping-the-center/index.html#the-mathematical-derivation",
     "title": "Trapping the Center: A Journey into Geometric Probability",
     "section": "The Mathematical Derivation",
-    "text": "The Mathematical Derivation\nInstead of calculating the probability of the center being inside, we calculate the probability of the complement: the center being outside.\n\n1. The Semicircle Condition\nThe center of the circle lies outside the polygon if and only if all points lie within the same arc (a semicircle).\n\n\n2. Fixing a Boundary\nPick any point and assume it is the “leftmost” point of a semicircle.\n\nFor the center to be outside, the other points must land in the arc starting from.\nThe probability for each point is.\nTotal probability for this specific point:.\n\n\n\n3. Symmetry\nThere are points that could serve as this “boundary” point. Since these events are mutually exclusive, we multiply:\n\n\n4. Final Result\nFor:\n\\[\nP(n) = \\frac{n-1}{2^{n-1}}\n\\]\n\n\nDerivation\n[Add your mathematical derivation here]"
+    "text": "The Mathematical Derivation\nFor pretty much all questions even loosely related to probability, it can be insightful to think about the complementary case.\nDoes this principle apply in this case? Well, trapping the center kind of warrants a sort of “balance” around the circle. However, moving one point slightly may break the trap, or it may not, and reasoning about this delicate interleaving of all n points is going to be quite complex. This is… a very loose justification to say the least, but the fact that success requires some form of coordination, and failure is usually simpler, may help us here.\nSo instead of calculating the probability of the center being inside, let’s consider the probability of the center being outside.\n\n1. The Crucial Condition\nLet’s define what it means for the center to be inside of such a shape. Imagine you are standing at the exact center of the circle. If you are not trapped, there must be an escape route - a straight line you can walk along to infinity without ever bumping into the rubber band.\nVisualize walking along this path. Since you never hit a wall, you are effectively “phasing” out of the circle’s interior. Once you are far enough out, you can look back and see that the entire group of nails is situated on the opposite side of the circle from your path. This is the crucial condition!\n\n\n2. Math Time!\nTo help us simplify the calculations, let us make another important observation.\nFor all points to lie in one semicircle, there must exist a gap between adjacent points larger than 180°\nThe circle is \\(360^\\circ\\), so it’s impossible to have two gaps larger than \\(180^\\circ\\), thus there is exactly one specific gap that we will call the “Big Gap”.\nSince this gap is unique, we can simply sum the probabilities of the gap starting at each point. To do this, let’s pick a specific point, \\(P_1\\). What are the odds that the gap immediately following \\(P_1\\) is larger than \\(180^\\circ\\)? This means all other \\(n-1\\) points have to be somewhere in the other \\(180^\\circ\\) of the circle. Each point separately has a \\(1/2\\) chance to land there, giving us \\(\\left( 1/2 \\right) ^{n-1}\\) for \\(n-1\\) overall.\nNow, since any of these \\(n\\) points could start the “Big Gap” (and, importantly, that these events are all mutually exclusive), we sum them up:\n\\[\nP(Outside)\n= n \\times \\left( \\frac{1}{2} \\right) ^{n-1}\n= \\frac{n}{2^{n-1}}\n\\]\nand DON’T FORGET THIS IS THE COMPLEMENT, so the probability the center is inside the shape is the complement, or\n\\[\nP(Inside)\n= 1-P(Outside)\n= 1-\\frac{n}{2^{n-1}}\n\\]"
   },
   {
-    "objectID": "math/trapping-the-center/index.html#interactive-simulation-1",
-    "href": "math/trapping-the-center/index.html#interactive-simulation-1",
+    "objectID": "math/trapping-the-center/index.html#results",
+    "href": "math/trapping-the-center/index.html#results",
     "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Interactive Simulation",
-    "text": "Interactive Simulation"
+    "section": "Results",
+    "text": "Results\nLet’s see how the probability changes as we increase the number of points:\n\n\nCode\n{\n  const data = Array.from({length: 18}, (_, i) =&gt; {\n    const n = i + 3;\n    return {\n      n: n,\n      prob: 1 - n / Math.pow(2, n - 1)\n    };\n  });\n\n  const width = 600;\n  const height = 300;\n  const margin = {top: 20, right: 20, bottom: 50, left: 70};\n\n  const container = d3.create(\"div\")\n    .style(\"position\", \"relative\")\n    .style(\"font-family\", \"sans-serif\");\n\n  const tooltip = container.append(\"div\")\n    .style(\"position\", \"absolute\")\n    .style(\"pointer-events\", \"none\")\n    .style(\"background\", \"rgba(255, 255, 255, 0.95)\")\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"box-shadow\", \"0 2px 4px rgba(0,0,0,0.1)\")\n    .style(\"padding\", \"8px 12px\")\n    .style(\"border-radius\", \"4px\")\n    .style(\"font-size\", \"13px\")\n    .style(\"display\", \"none\")\n    .style(\"z-index\", \"10\");\n\n  // 5. Create SVG\n  const svg = container.append(\"svg\")\n    .attr(\"width\", width)\n    .attr(\"height\", height)\n    .attr(\"viewBox\", [0, 0, width, height])\n    .attr(\"style\", \"max-width: 100%; height: auto; background: transparent;\");\n\n  const x = d3.scaleLinear()\n    .domain([3, 20])\n    .range([margin.left, width - margin.right]);\n\n  const y = d3.scaleLinear()\n    .domain([0, 1])\n    .range([height - margin.bottom, margin.top]);\n\n  // Grid lines\n  svg.append(\"g\")\n    .attr(\"stroke\", \"#e0e0e0\")\n    .attr(\"stroke-opacity\", 0.3)\n    .call(g =&gt; g.selectAll(\"line\")\n      .data(y.ticks(10))\n      .join(\"line\")\n        .attr(\"x1\", margin.left)\n        .attr(\"x2\", width - margin.right)\n        .attr(\"y1\", d =&gt; y(d))\n        .attr(\"y2\", d =&gt; y(d)));\n\n  // Line path\n  const line = d3.line()\n    .x(d =&gt; x(d.n))\n    .y(d =&gt; y(d.prob));\n\n  svg.append(\"path\")\n    .datum(data)\n    .attr(\"fill\", \"none\")\n    .attr(\"stroke\", \"steelblue\")\n    .attr(\"stroke-width\", 2.5)\n    .attr(\"d\", line);\n\n  // Dots with Event Listeners\n  svg.append(\"g\")\n    .selectAll(\"circle\")\n    .data(data)\n    .join(\"circle\")\n      .attr(\"cx\", d =&gt; x(d.n))\n      .attr(\"cy\", d =&gt; y(d.prob))\n      .attr(\"r\", 5)\n      .attr(\"fill\", \"steelblue\")\n      .attr(\"stroke\", \"#1a528f\")\n      .attr(\"stroke-width\", 2)\n      .style(\"cursor\", \"pointer\")\n      .on(\"mouseover\", function(event, d) {\n         // Highlight Dot\n         d3.select(this)\n           .transition().duration(100)\n           .attr(\"r\", 7)\n           .attr(\"fill\", \"#5a9fd4\");\n         \n         // Show Tooltip\n         tooltip\n           .style(\"display\", \"block\")\n           .html(`&lt;strong&gt;n = ${d.n}&lt;/strong&gt;&lt;br&gt;P = ${(d.prob * 100).toFixed(1)}%`);\n      })\n      .on(\"mousemove\", function(event) {\n         // Move Tooltip with smart positioning to avoid clipping\n         const [mx, my] = d3.pointer(event, container.node());\n         \n         // Position tooltip above point by default, but flip if too close to top\n         const tooltipOffset = 45;\n         const finalTop = my &lt; tooltipOffset ? my + 20 : my - tooltipOffset;\n         \n         tooltip\n           .style(\"left\", `${mx + 10}px`)\n           .style(\"top\", `${finalTop}px`);\n      })\n      .on(\"mouseout\", function() {\n         // Reset Dot\n         d3.select(this)\n           .transition().duration(100)\n           .attr(\"r\", 5)\n           .attr(\"fill\", \"steelblue\");\n           \n         // Hide Tooltip\n         tooltip.style(\"display\", \"none\");\n      });\n\n  // X Axis\n  svg.append(\"g\")\n    .attr(\"transform\", `translate(0,${height - margin.bottom})`)\n    .call(d3.axisBottom(x).tickValues(d3.range(3, 21)).tickFormat(d3.format(\"d\")))\n    .call(g =&gt; g.select(\".domain\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick line\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick text\").attr(\"fill\", \"#333\").attr(\"font-size\", \"12px\"));\n\n  // Y Axis\n  svg.append(\"g\")\n    .attr(\"transform\", `translate(${margin.left},0)`)\n    .call(d3.axisLeft(y).tickFormat(d3.format(\".0%\")).ticks(10))\n    .call(g =&gt; g.select(\".domain\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick line\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick text\").attr(\"fill\", \"#333\").attr(\"font-size\", \"12px\"));\n\n  // Labels\n  svg.append(\"text\")\n    .attr(\"x\", width / 2)\n    .attr(\"y\", height - 5)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"fill\", \"#333\")\n    .attr(\"font-size\", \"14px\")\n    .attr(\"font-weight\", \"500\")\n    .text(\"Number of Points (n)\");\n\n  svg.append(\"text\")\n    .attr(\"transform\", \"rotate(-90)\")\n    .attr(\"x\", -height / 2)\n    .attr(\"y\", 15)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"fill\", \"#333\")\n    .attr(\"font-size\", \"14px\")\n    .attr(\"font-weight\", \"500\")\n    .text(\"Probability (Trapped)\");\n\n  return container.node();\n}\n\n\n\n\n\n\n\nThe graph should kind of make sense, as you add more points, it becomes exponentially more unlikely that they’ll all end up on the same semicircle of the circle."
   },
   {
-    "objectID": "math/trapping-the-center/index.html#interactive-simulation-2",
-    "href": "math/trapping-the-center/index.html#interactive-simulation-2",
+    "objectID": "math/index.html",
+    "href": "math/index.html",
+    "title": "Math",
+    "section": "",
+    "text": "Mathematical concepts, proofs, statistics, and computational mathematics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\nWhat is the probability that n random points on a circle contain the center?\n\n\n\n\n\nDec 18, 2025\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "programming/index.html",
+    "href": "programming/index.html",
+    "title": "Programming",
+    "section": "",
+    "text": "Programming posts covering algorithms, languages, software engineering, and development.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "miscellaneous/index.html",
+    "href": "miscellaneous/index.html",
+    "title": "Miscellaneous",
+    "section": "",
+    "text": "Everything else - thoughts, reflections, and topics that don’t fit neatly into other categories.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "math/trapping-the-center/index.html#export",
+    "href": "math/trapping-the-center/index.html#export",
     "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Interactive Simulation",
-    "text": "Interactive Simulation\n\n\nCode\nimport { createInteractiveCircle } from \"./visualization.js\"\n\n// 1. Create the container\ncontrols = {\n  const container = html`&lt;div class=\"controls-container\"&gt;\n    &lt;div id=\"slider-container\"&gt;&lt;/div&gt;\n    &lt;div id=\"button-container\"&gt;&lt;/div&gt;\n  &lt;/div&gt;`;\n  return container;\n}\n\n// 2. The Slider\nviewof n = {\n  const container = controls.querySelector('#slider-container');\n  container.innerHTML = ''; \n  const input = Inputs.range([3, 12], {value: 6, step: 1, label: \"Points (n)\"});\n  container.appendChild(input);\n  return input;\n}\n\n// 3. The Randomize Button\nviewof randomize = {\n  const container = controls.querySelector('#button-container');\n  container.innerHTML = ''; \n  \n  const button = html`&lt;button class=\"randomize-btn\"&gt;Randomize Positions&lt;/button&gt;`;\n  container.appendChild(button);\n  \n  // Initialize value\n  button.value = 0;\n  \n  button.onclick = () =&gt; {\n    button.value += 1;\n    button.dispatchEvent(new Event(\"input\"));\n  };\n  \n  return button;\n}\n\n// 4. The Visualization Logic\nvisual = {\n  // Declare dependencies\n  n;\n  randomize;\n\n  // CHECK: Can we reuse the existing canvas?\n  // We reuse it if the canvas exists (this) AND the number of points (n) hasn't changed.\n  if (this && this.n === n) {\n    // We are here because 'randomize' changed (button was clicked).\n    // Just call the randomize function on the existing logic object.\n    if (randomize &gt; this.lastRandomize) {\n       this.logic.randomize();\n    }\n    \n    // Update the tracker so we don't randomize again unnecessarily\n    this.lastRandomize = randomize;\n    return this; \n  }\n\n  // RESET: If we reach here, either it's the first load OR 'n' has changed.\n  // We create a fresh canvas with EVEN spacing.\n  const c = DOM.canvas(400, 400);\n  \n  // Initialize with \"even\" and store the logic object to access later\n  c.logic = createInteractiveCircle(c, n, \"even\");\n  \n  // Attach state to the canvas DOM element so we can check it next time\n  c.n = n;\n  c.lastRandomize = randomize;\n  \n  return c;\n}"
+    "section": "EXPORT",
+    "text": "EXPORT"
+  },
+  {
+    "objectID": "math/trapping-the-center/index.html#follow-ups",
+    "href": "math/trapping-the-center/index.html#follow-ups",
+    "title": "Trapping the Center: A Journey into Geometric Probability",
+    "section": "Follow-Ups",
+    "text": "Follow-Ups\nAmong the more astute readers may have noticed a striking connection with the 3Blue1Brown video, “The Hardest Problem on the Hardest Test”. This is not a coincidence, and it is infact a 3D version of the exact same problem"
   }
 ]

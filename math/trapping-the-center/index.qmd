@@ -131,49 +131,206 @@ app = {
 
 ## The Mathematical Derivation
 
-Instead of calculating the probability of the center being *inside*, we calculate the probability of the **complement**: the center being **outside**.
+For pretty much all questions even loosely related to probability, it can be insightful to think about the **complementary** case. 
 
-### 1. The Semicircle Condition
+Does this principle apply in this case? Well, trapping the center kind of warrants a sort of "balance" around the circle. However, moving one point slightly may break the trap, or it may not, and reasoning about this delicate interleaving of all n points is going to be quite complex. This is... a very loose justification to say the least, but the fact that success requires some form of coordination, and failure is usually simpler, may help us here.
 
-The center of the circle lies outside the polygon if and only if all points lie within the same arc (a semicircle).
+So instead of calculating the probability of the center being *inside*, let's consider the probability of the center being **outside**.
 
-### 2. Fixing a Boundary
+### 1. The Crucial Condition
 
-Pick any point and assume it is the "leftmost" point of a semicircle.
+Let's define what it means for the center to be inside of such a shape. Imagine you are standing at the exact center of the circle. If you are not trapped, there must be an *escape route* - a straight line you can walk along to infinity without ever bumping into the rubber band.
 
-* For the center to be outside, the other points must land in the arc starting from.
-* The probability for each point is.
-* Total probability for this specific point:.
+Visualize walking along this path. Since you never hit a wall, you are effectively "phasing" out of the circle's interior. Once you are far enough out, you can look back and see that the entire group of nails is situated on the opposite side of the circle from your path. This is the crucial condition!
 
-### 3. Symmetry
+### 2. Math Time!
+To help us simplify the calculations, let us make another important observation. 
 
-There are points that could serve as this "boundary" point. Since these events are mutually exclusive, we multiply:
+*For all points to lie in one semicircle, there must exist a gap between adjacent points larger than 180°*
 
+The circle is $360^\circ$, so it's impossible to have two gaps larger than $180^\circ$, thus there is exactly one specific gap that we will call the "Big Gap".
 
-### 4. Final Result
+Since this gap is unique, we can simply sum the probabilities of the gap starting at each point. To do this, let's pick a specific point, $P_1$. What are the odds that the gap immediately following $P_1$ is larger than $180^\circ$? This means all other $n-1$ points have to be somewhere in the *other* $180^\circ$ of the circle. Each point separately has a $1/2$ chance to land there, giving us $\left( 1/2 \right) ^{n-1}$ for $n-1$ overall.
 
-For:
+Now, since any of these $n$ points could start the "Big Gap" (and, importantly, that these events are all mutually exclusive), we sum them up:
 
 $$
-P(n) = \frac{n-1}{2^{n-1}}
+P(Outside) 
+= n \times \left( \frac{1}{2} \right) ^{n-1}
+= \frac{n}{2^{n-1}}
 $$
 
-### Derivation
+and **DON'T FORGET THIS IS THE COMPLEMENT**, so the probability the center is inside the shape is the complement, or  
 
-[Add your mathematical derivation here]
+$$
+P(Inside) 
+= 1-P(Outside) 
+= 1-\frac{n}{2^{n-1}}
+$$
 
 ## Results
 
-| Points | Probability |
-|--------|-------------|
-| 3      | 25.0%       |
-| 4      | 37.5%       |
-| 5      | 50.0%       |
-| 6      | 62.5%       |
-| 10     | 87.9%       |
+Let's see how the probability changes as we increase the number of points:
 
-As $n \to \infty$, the probability approaches 1.
+```{ojs}
+//| echo: false
+{
+  const data = Array.from({length: 18}, (_, i) => {
+    const n = i + 3;
+    return {
+      n: n,
+      prob: 1 - n / Math.pow(2, n - 1)
+    };
+  });
 
-## Conclusion
+  const width = 600;
+  const height = 300;
+  const margin = {top: 20, right: 20, bottom: 50, left: 70};
 
-This problem beautifully demonstrates how geometric intuition connects to discrete probability. The interactive visualization above lets you explore different values of $n$ and see the pattern emerge.
+  const container = d3.create("div")
+    .style("position", "relative")
+    .style("font-family", "sans-serif");
+
+  const tooltip = container.append("div")
+    .style("position", "absolute")
+    .style("pointer-events", "none")
+    .style("background", "rgba(255, 255, 255, 0.95)")
+    .style("border", "1px solid #ccc")
+    .style("box-shadow", "0 2px 4px rgba(0,0,0,0.1)")
+    .style("padding", "8px 12px")
+    .style("border-radius", "4px")
+    .style("font-size", "13px")
+    .style("display", "none")
+    .style("z-index", "10");
+
+  // 5. Create SVG
+  const svg = container.append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [0, 0, width, height])
+    .attr("style", "max-width: 100%; height: auto; background: transparent;");
+
+  const x = d3.scaleLinear()
+    .domain([3, 20])
+    .range([margin.left, width - margin.right]);
+
+  const y = d3.scaleLinear()
+    .domain([0, 1])
+    .range([height - margin.bottom, margin.top]);
+
+  // Grid lines
+  svg.append("g")
+    .attr("stroke", "#e0e0e0")
+    .attr("stroke-opacity", 0.3)
+    .call(g => g.selectAll("line")
+      .data(y.ticks(10))
+      .join("line")
+        .attr("x1", margin.left)
+        .attr("x2", width - margin.right)
+        .attr("y1", d => y(d))
+        .attr("y2", d => y(d)));
+
+  // Line path
+  const line = d3.line()
+    .x(d => x(d.n))
+    .y(d => y(d.prob));
+
+  svg.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("stroke-width", 2.5)
+    .attr("d", line);
+
+  // Dots with Event Listeners
+  svg.append("g")
+    .selectAll("circle")
+    .data(data)
+    .join("circle")
+      .attr("cx", d => x(d.n))
+      .attr("cy", d => y(d.prob))
+      .attr("r", 5)
+      .attr("fill", "steelblue")
+      .attr("stroke", "#1a528f")
+      .attr("stroke-width", 2)
+      .style("cursor", "pointer")
+      .on("mouseover", function(event, d) {
+         // Highlight Dot
+         d3.select(this)
+           .transition().duration(100)
+           .attr("r", 7)
+           .attr("fill", "#5a9fd4");
+         
+         // Show Tooltip
+         tooltip
+           .style("display", "block")
+           .html(`<strong>n = ${d.n}</strong><br>P = ${(d.prob * 100).toFixed(1)}%`);
+      })
+      .on("mousemove", function(event) {
+         // Move Tooltip with smart positioning to avoid clipping
+         const [mx, my] = d3.pointer(event, container.node());
+         
+         // Position tooltip above point by default, but flip if too close to top
+         const tooltipOffset = 45;
+         const finalTop = my < tooltipOffset ? my + 20 : my - tooltipOffset;
+         
+         tooltip
+           .style("left", `${mx + 10}px`)
+           .style("top", `${finalTop}px`);
+      })
+      .on("mouseout", function() {
+         // Reset Dot
+         d3.select(this)
+           .transition().duration(100)
+           .attr("r", 5)
+           .attr("fill", "steelblue");
+           
+         // Hide Tooltip
+         tooltip.style("display", "none");
+      });
+
+  // X Axis
+  svg.append("g")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).tickValues(d3.range(3, 21)).tickFormat(d3.format("d")))
+    .call(g => g.select(".domain").attr("stroke", "#333"))
+    .call(g => g.selectAll(".tick line").attr("stroke", "#333"))
+    .call(g => g.selectAll(".tick text").attr("fill", "#333").attr("font-size", "12px"));
+
+  // Y Axis
+  svg.append("g")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y).tickFormat(d3.format(".0%")).ticks(10))
+    .call(g => g.select(".domain").attr("stroke", "#333"))
+    .call(g => g.selectAll(".tick line").attr("stroke", "#333"))
+    .call(g => g.selectAll(".tick text").attr("fill", "#333").attr("font-size", "12px"));
+
+  // Labels
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 5)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#333")
+    .attr("font-size", "14px")
+    .attr("font-weight", "500")
+    .text("Number of Points (n)");
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 15)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#333")
+    .attr("font-size", "14px")
+    .attr("font-weight", "500")
+    .text("Probability (Trapped)");
+
+  return container.node();
+}
+```
+
+The graph should kind of make sense, as you add more points, it becomes exponentially more unlikely that they'll all end up on the same semicircle of the circle.
+
+## Follow-Ups
+
+Among the more astute readers may have noticed a striking connection with the 3Blue1Brown video, ["The Hardest Problem on the Hardest Test"](https://www.youtube.com/watch?v=OkmNXy7er84). This is not a coincidence, and it is infact a 3D version of the exact same problem

@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/personal/index.html",
-    "items": [
-      "/personal/reflections/2024-year-review.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/about.html",
@@ -16,31 +10,17 @@
     ]
   },
   {
-    "listing": "/technical/index.html",
-    "items": [
-      "/technical/machine-learning/neural-networks-intro.html",
-      "/technical/web-development/fastapi-tutorial.html"
-    ]
-  },
-  {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/papers/attention-paper-summary.html",
-      "/research/notes/gradient-descent-notes.html"
-    ]
-  },
-  {
     "listing": "/math/index.html",
     "items": [
       "/math/trapping-the-center/index.html"
     ]
   },
   {
-    "listing": "/miscellaneous/index.html",
+    "listing": "/programming/index.html",
     "items": []
   },
   {
-    "listing": "/programming/index.html",
+    "listing": "/miscellaneous/index.html",
     "items": []
   }
 ]
