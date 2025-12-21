@@ -1,31 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Alex Shao’s Blog",
+    "objectID": "programming/index.html",
+    "href": "programming/index.html",
+    "title": "Programming",
     "section": "",
-    "text": "Welcome to my blog! Here you’ll find posts organized by topic."
-  },
-  {
-    "objectID": "index.html#latest-posts",
-    "href": "index.html#latest-posts",
-    "title": "Alex Shao’s Blog",
-    "section": "Latest Posts",
-    "text": "Latest Posts\n\n\n\n\n\n\n\n\n\n\nAbout\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMath\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\n\n\n\nDec 18, 2025\n\n9 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
-  },
-  {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "About",
-    "section": "",
-    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
+    "text": "Programming posts covering algorithms, languages, software engineering, and development.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "math/trapping-the-center/index.html",
@@ -56,18 +35,39 @@
     "text": "Results\nLet’s see how the probability changes as we increase the number of points:\n\n\nCode\n{\n  const data = Array.from({length: 18}, (_, i) =&gt; {\n    const n = i + 3;\n    return {\n      n: n,\n      prob: 1 - n / Math.pow(2, n - 1)\n    };\n  });\n\n  const width = 600;\n  const height = 300;\n  const margin = {top: 20, right: 20, bottom: 50, left: 70};\n\n  const container = d3.create(\"div\")\n    .style(\"position\", \"relative\")\n    .style(\"font-family\", \"sans-serif\");\n\n  const tooltip = container.append(\"div\")\n    .style(\"position\", \"absolute\")\n    .style(\"pointer-events\", \"none\")\n    .style(\"background\", \"rgba(255, 255, 255, 0.95)\")\n    .style(\"border\", \"1px solid #ccc\")\n    .style(\"box-shadow\", \"0 2px 4px rgba(0,0,0,0.1)\")\n    .style(\"padding\", \"8px 12px\")\n    .style(\"border-radius\", \"4px\")\n    .style(\"font-size\", \"13px\")\n    .style(\"display\", \"none\")\n    .style(\"z-index\", \"10\");\n\n  // 5. Create SVG\n  const svg = container.append(\"svg\")\n    .attr(\"width\", width)\n    .attr(\"height\", height)\n    .attr(\"viewBox\", [0, 0, width, height])\n    .attr(\"style\", \"max-width: 100%; height: auto; background: transparent;\");\n\n  const x = d3.scaleLinear()\n    .domain([3, 20])\n    .range([margin.left, width - margin.right]);\n\n  const y = d3.scaleLinear()\n    .domain([0, 1])\n    .range([height - margin.bottom, margin.top]);\n\n  // Grid lines\n  svg.append(\"g\")\n    .attr(\"stroke\", \"#e0e0e0\")\n    .attr(\"stroke-opacity\", 0.3)\n    .call(g =&gt; g.selectAll(\"line\")\n      .data(y.ticks(10))\n      .join(\"line\")\n        .attr(\"x1\", margin.left)\n        .attr(\"x2\", width - margin.right)\n        .attr(\"y1\", d =&gt; y(d))\n        .attr(\"y2\", d =&gt; y(d)));\n\n  // Line path\n  const line = d3.line()\n    .x(d =&gt; x(d.n))\n    .y(d =&gt; y(d.prob));\n\n  svg.append(\"path\")\n    .datum(data)\n    .attr(\"fill\", \"none\")\n    .attr(\"stroke\", \"steelblue\")\n    .attr(\"stroke-width\", 2.5)\n    .attr(\"d\", line);\n\n  // Dots with Event Listeners\n  svg.append(\"g\")\n    .selectAll(\"circle\")\n    .data(data)\n    .join(\"circle\")\n      .attr(\"cx\", d =&gt; x(d.n))\n      .attr(\"cy\", d =&gt; y(d.prob))\n      .attr(\"r\", 5)\n      .attr(\"fill\", \"steelblue\")\n      .attr(\"stroke\", \"#1a528f\")\n      .attr(\"stroke-width\", 2)\n      .style(\"cursor\", \"pointer\")\n      .on(\"mouseover\", function(event, d) {\n         // Highlight Dot\n         d3.select(this)\n           .transition().duration(100)\n           .attr(\"r\", 7)\n           .attr(\"fill\", \"#5a9fd4\");\n         \n         // Show Tooltip\n         tooltip\n           .style(\"display\", \"block\")\n           .html(`&lt;strong&gt;n = ${d.n}&lt;/strong&gt;&lt;br&gt;P = ${(d.prob * 100).toFixed(1)}%`);\n      })\n      .on(\"mousemove\", function(event) {\n         // Move Tooltip with smart positioning to avoid clipping\n         const [mx, my] = d3.pointer(event, container.node());\n         \n         // Position tooltip above point by default, but flip if too close to top\n         const tooltipOffset = 45;\n         const finalTop = my &lt; tooltipOffset ? my + 20 : my - tooltipOffset;\n         \n         tooltip\n           .style(\"left\", `${mx + 10}px`)\n           .style(\"top\", `${finalTop}px`);\n      })\n      .on(\"mouseout\", function() {\n         // Reset Dot\n         d3.select(this)\n           .transition().duration(100)\n           .attr(\"r\", 5)\n           .attr(\"fill\", \"steelblue\");\n           \n         // Hide Tooltip\n         tooltip.style(\"display\", \"none\");\n      });\n\n  // X Axis\n  svg.append(\"g\")\n    .attr(\"transform\", `translate(0,${height - margin.bottom})`)\n    .call(d3.axisBottom(x).tickValues(d3.range(3, 21)).tickFormat(d3.format(\"d\")))\n    .call(g =&gt; g.select(\".domain\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick line\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick text\").attr(\"fill\", \"#333\").attr(\"font-size\", \"12px\"));\n\n  // Y Axis\n  svg.append(\"g\")\n    .attr(\"transform\", `translate(${margin.left},0)`)\n    .call(d3.axisLeft(y).tickFormat(d3.format(\".0%\")).ticks(10))\n    .call(g =&gt; g.select(\".domain\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick line\").attr(\"stroke\", \"#333\"))\n    .call(g =&gt; g.selectAll(\".tick text\").attr(\"fill\", \"#333\").attr(\"font-size\", \"12px\"));\n\n  // Labels\n  svg.append(\"text\")\n    .attr(\"x\", width / 2)\n    .attr(\"y\", height - 5)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"fill\", \"#333\")\n    .attr(\"font-size\", \"14px\")\n    .attr(\"font-weight\", \"500\")\n    .text(\"Number of Points (n)\");\n\n  svg.append(\"text\")\n    .attr(\"transform\", \"rotate(-90)\")\n    .attr(\"x\", -height / 2)\n    .attr(\"y\", 15)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"fill\", \"#333\")\n    .attr(\"font-size\", \"14px\")\n    .attr(\"font-weight\", \"500\")\n    .text(\"Probability (Trapped)\");\n\n  return container.node();\n}\n\n\n\n\n\n\n\nThe graph should kind of make sense, as you add more points, it becomes exponentially more unlikely that they’ll all end up on the same semicircle of the circle."
   },
   {
-    "objectID": "math/index.html",
-    "href": "math/index.html",
-    "title": "Math",
-    "section": "",
-    "text": "Mathematical concepts, proofs, statistics, and computational mathematics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\nWhat is the probability that n random points on a circle contain the center?\n\n\n\n\n\nDec 18, 2025\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
+    "objectID": "math/trapping-the-center/index.html#follow-ups",
+    "href": "math/trapping-the-center/index.html#follow-ups",
+    "title": "Trapping the Center: A Journey into Geometric Probability",
+    "section": "Follow-Ups",
+    "text": "Follow-Ups\nAmong the more astute readers may have noticed a striking connection with the 3Blue1Brown video, “The Hardest Problem on the Hardest Test”. This is not a coincidence, and it is infact a 3D version of basically the exact same problem. Instead of a circle, they use a sphere, and instead of a semicircle, the problem deals with a hemisphere.\nHere are some follow-up questions you can try:\n\nIf you pick 3 random points on a circle, what is the probability that the triangle they form is obtuse?\n(Hard) If you pick 4 random points in a convex region (like a circle), what is the probability that one point lies inside the triangle formed by the others?"
   },
   {
-    "objectID": "programming/index.html",
-    "href": "programming/index.html",
-    "title": "Programming",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alex Shao’s Blog",
     "section": "",
-    "text": "Programming posts covering algorithms, languages, software engineering, and development.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog! Here you’ll find posts organized by topic."
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Alex Shao’s Blog",
+    "section": "Latest Posts",
+    "text": "Latest Posts\n\n\n\n\n\n\n\n\n\n\nAbout\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMath\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nProgramming\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\n\n\n\nDec 18, 2025\n\n12 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
+    "section": "",
+    "text": "I’m Alex Shao, and I just haphazardly write about anything interesting I discover."
   },
   {
     "objectID": "miscellaneous/index.html",
@@ -77,17 +77,10 @@
     "text": "Everything else - thoughts, reflections, and topics that don’t fit neatly into other categories.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "math/trapping-the-center/index.html#export",
-    "href": "math/trapping-the-center/index.html#export",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "EXPORT",
-    "text": "EXPORT"
-  },
-  {
-    "objectID": "math/trapping-the-center/index.html#follow-ups",
-    "href": "math/trapping-the-center/index.html#follow-ups",
-    "title": "Trapping the Center: A Journey into Geometric Probability",
-    "section": "Follow-Ups",
-    "text": "Follow-Ups\nAmong the more astute readers may have noticed a striking connection with the 3Blue1Brown video, “The Hardest Problem on the Hardest Test”. This is not a coincidence, and it is infact a 3D version of the exact same problem"
+    "objectID": "math/index.html",
+    "href": "math/index.html",
+    "title": "Math",
+    "section": "",
+    "text": "Mathematical concepts, proofs, statistics, and computational mathematics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrapping the Center: A Journey into Geometric Probability\n\n\n\nmath\n\nprobability\n\ngeometry\n\n\n\nWhat is the probability that n random points on a circle contain the center?\n\n\n\n\n\nDec 18, 2025\n\n\nAlex Shao\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -333,4 +333,10 @@ The graph should kind of make sense, as you add more points, it becomes exponent
 
 ## Follow-Ups
 
-Among the more astute readers may have noticed a striking connection with the 3Blue1Brown video, ["The Hardest Problem on the Hardest Test"](https://www.youtube.com/watch?v=OkmNXy7er84). This is not a coincidence, and it is infact a 3D version of the exact same problem
+Among the more astute readers may have noticed a striking connection with the 3Blue1Brown video, ["The Hardest Problem on the Hardest Test"](https://www.youtube.com/watch?v=OkmNXy7er84). This is not a coincidence, and it is infact a 3D version of basically the exact same problem. Instead of a circle, they use a sphere, and instead of a semicircle, the problem deals with a hemisphere. 
+
+Here are some follow-up questions you can try:
+
+- If you pick 3 random points on a circle, what is the probability that the triangle they form is **obtuse**?
+
+- (Hard) If you pick 4 random points in a convex region (like a circle), what is the probability that one point *lies inside the triangle formed by the others*?
