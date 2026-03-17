@@ -1,0 +1,13 @@
+- google 2nd round 2nd question interview
+    - obviously don't say it was from google, maybe change it up a bit as well so it's more... obscured? so google doesn't take my website down and sue me :(
+    - question:
+        - given some list of elements and a boolean function which takes in a list of arguments
+        - an element may be 'marked' or unmarked
+        - allowed to pass in any subset of the list of arguments into the function
+        - function will return true if and only if the list of arguments you pass into the function has at least 2 arguments which are marked
+        - function runs in o(n) where n is the size of the arguments passed in
+        - find at least two elements which are marked
+    - extensions:
+        - onyl returns true if k arguments are marked, find k elements
+- 3blue1brown challenge
+    - https://youtube.com/shorts/t3jZ2xGOvYg?si=03imLqVTocjIa8qe
